@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 Taka. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TitleViewController.h"
 
-@interface ViewController ()
+@interface TitleViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TitleViewController
 
 - (void)viewDidLoad
 {

@@ -14,7 +14,7 @@
 		3B3A7064195E8174002C59FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7063195E8174002C59FF /* main.m */; };
 		3B3A7068195E8174002C59FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7067195E8174002C59FF /* AppDelegate.m */; };
 		3B3A706B195E8174002C59FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A7069195E8174002C59FF /* Main.storyboard */; };
-		3B3A706E195E8174002C59FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A706D195E8174002C59FF /* ViewController.m */; };
+		3B3A706E195E8174002C59FF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A706D195E8174002C59FF /* TitleViewController.m */; };
 		3B3A7070195E8174002C59FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A706F195E8174002C59FF /* Images.xcassets */; };
 		3B3A7077195E8174002C59FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A7076195E8174002C59FF /* XCTest.framework */; };
 		3B3A7078195E8174002C59FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A7057195E8174002C59FF /* Foundation.framework */; };
@@ -45,8 +45,8 @@
 		3B3A7066195E8174002C59FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B3A7067195E8174002C59FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3B3A706A195E8174002C59FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B3A706C195E8174002C59FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3B3A706D195E8174002C59FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B3A706C195E8174002C59FF /* TitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		3B3A706D195E8174002C59FF /* TitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		3B3A706F195E8174002C59FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B3A7075195E8174002C59FF /* TreasureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3A7076195E8174002C59FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,8 +115,8 @@
 				3B3A7066195E8174002C59FF /* AppDelegate.h */,
 				3B3A7067195E8174002C59FF /* AppDelegate.m */,
 				3B3A7069195E8174002C59FF /* Main.storyboard */,
-				3B3A706C195E8174002C59FF /* ViewController.h */,
-				3B3A706D195E8174002C59FF /* ViewController.m */,
+				3B3A706C195E8174002C59FF /* TitleViewController.h */,
+				3B3A706D195E8174002C59FF /* TitleViewController.m */,
 				3B3A706F195E8174002C59FF /* Images.xcassets */,
 				3B3A705E195E8174002C59FF /* Supporting Files */,
 			);
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B3A706E195E8174002C59FF /* ViewController.m in Sources */,
+				3B3A706E195E8174002C59FF /* TitleViewController.m in Sources */,
 				3B3A7068195E8174002C59FF /* AppDelegate.m in Sources */,
 				3B3A7064195E8174002C59FF /* main.m in Sources */,
 			);
@@ -456,6 +456,7 @@
 				3B3A7088195E8174002C59FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B3A7089195E8174002C59FF /* Build configuration list for PBXNativeTarget "TreasureTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				3B3A708B195E8174002C59FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
