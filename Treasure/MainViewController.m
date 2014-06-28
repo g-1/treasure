@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "RiddleViewController.h"
 
 @interface MainViewController ()
 
@@ -60,6 +61,14 @@
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if( [segue.identifier isEqualToString:@"riddle"] ){
+    RiddleViewController* nextViewController = (RiddleViewController*)segue.destinationViewController;
+    nextViewController.roomType = 0;//仮
+  }
 }
 
 #pragma mark - delegate

@@ -10,4 +10,6 @@
 
 @interface RiddleViewController : UIViewController
 
+@property(nonatomic) int roomType;
+
 @end

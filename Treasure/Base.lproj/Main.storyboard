@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="S2D-JS-nZb">
             <objects>
-                <navigationController definesPresentationContext="YES" id="cD4-hk-npf" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="cD4-hk-npf" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcB-7n-uhD">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -116,10 +116,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ナゾ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-J9-w3q">
+                                <rect key="frame" x="122" y="99" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eCA-zx-UVE"/>
+                    <connections>
+                        <outlet property="riddleTitle" destination="xbq-J9-w3q" id="1rh-F1-PK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9m0-66-1c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
