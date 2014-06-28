@@ -10,6 +10,8 @@
 
 @interface TitleViewController ()
 
+- (IBAction)tap:(id)sender;
+
 @end
 
 @implementation TitleViewController
@@ -24,6 +26,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)tap:(id)sender
+{
+  [self performSegueWithIdentifier:@"main" sender:sender];
 }
 
 @end

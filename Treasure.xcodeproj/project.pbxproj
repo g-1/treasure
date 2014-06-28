@@ -21,6 +21,8 @@
 		3B3A7079195E8174002C59FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A705B195E8174002C59FF /* UIKit.framework */; };
 		3B3A7081195E8174002C59FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A707F195E8174002C59FF /* InfoPlist.strings */; };
 		3B3A7083195E8174002C59FF /* TreasureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7082195E8174002C59FF /* TreasureTests.m */; };
+		3B754C6D195E893600FF7287 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C6C195E893600FF7287 /* MainViewController.m */; };
+		3B754C71195E8A3400FF7287 /* RiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C70195E8A3400FF7287 /* RiddleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		3B3A707E195E8174002C59FF /* TreasureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TreasureTests-Info.plist"; sourceTree = "<group>"; };
 		3B3A7080195E8174002C59FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B3A7082195E8174002C59FF /* TreasureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreasureTests.m; sourceTree = "<group>"; };
+		3B754C6B195E893600FF7287 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		3B754C6C195E893600FF7287 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3B754C6F195E8A3400FF7287 /* RiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiddleViewController.h; sourceTree = "<group>"; };
+		3B754C70195E8A3400FF7287 /* RiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiddleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,10 @@
 		3B3A705D195E8174002C59FF /* Treasure */ = {
 			isa = PBXGroup;
 			children = (
+				3B754C6E195E894900FF7287 /* ViewController */,
 				3B3A7066195E8174002C59FF /* AppDelegate.h */,
 				3B3A7067195E8174002C59FF /* AppDelegate.m */,
 				3B3A7069195E8174002C59FF /* Main.storyboard */,
-				3B3A706C195E8174002C59FF /* TitleViewController.h */,
-				3B3A706D195E8174002C59FF /* TitleViewController.m */,
 				3B3A706F195E8174002C59FF /* Images.xcassets */,
 				3B3A705E195E8174002C59FF /* Supporting Files */,
 			);
@@ -150,6 +155,19 @@
 				3B3A707F195E8174002C59FF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B754C6E195E894900FF7287 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B3A706C195E8174002C59FF /* TitleViewController.h */,
+				3B3A706D195E8174002C59FF /* TitleViewController.m */,
+				3B754C6B195E893600FF7287 /* MainViewController.h */,
+				3B754C6C195E893600FF7287 /* MainViewController.m */,
+				3B754C6F195E8A3400FF7287 /* RiddleViewController.h */,
+				3B754C70195E8A3400FF7287 /* RiddleViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +269,9 @@
 			files = (
 				3B3A706E195E8174002C59FF /* TitleViewController.m in Sources */,
 				3B3A7068195E8174002C59FF /* AppDelegate.m in Sources */,
+				3B754C71195E8A3400FF7287 /* RiddleViewController.m in Sources */,
 				3B3A7064195E8174002C59FF /* main.m in Sources */,
+				3B754C6D195E893600FF7287 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
