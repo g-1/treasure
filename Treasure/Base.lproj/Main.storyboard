@@ -77,24 +77,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Oe-Ea-0JG">
+                                <rect key="frame" x="19" y="20" width="281" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDS-q0-M0P">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.62620220497806223" blue="0.15244476111108751" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="1tP-HV-Vus" appends="YES" id="AiO-as-5tw"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="VzX-sb-KiM"/>
                     <connections>
+                        <outlet property="baseMessage" destination="9Oe-Ea-0JG" id="nvB-h0-7Kk"/>
+                        <outlet property="enterMessageLabel" destination="MDS-q0-M0P" id="y9e-0q-mHn"/>
                         <segue destination="5MB-Wi-pba" kind="push" identifier="riddle" id="J1c-ey-Ulz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jd-el-G3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1tP-HV-Vus">
-                    <connections>
-                        <action selector="tap:" destination="lcz-Vp-lSm" id="ljb-N4-tS2"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="218" y="60"/>
         </scene>

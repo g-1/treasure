@@ -15,7 +15,15 @@
 @property(nonatomic) NSUUID* proximityUUID;
 @property(nonatomic) CLBeaconRegion* beaconRegion;
 
+@property(nonatomic, weak) IBOutlet UIView* baseMessage;
+@property(nonatomic, weak) IBOutlet UILabel* enterMessageLabel;
+
+//action
 - (IBAction)tap:(id)sender;
+
+//utility
+- (void)setEnterMessage:(NSString*)message;
+- (void)hideEnterMessage;
 
 @end
 
@@ -44,6 +52,8 @@
     
     // 観測するビーコン領域の作成
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.proximityUUID
+                                                                major:0x0001
+                                                                minor:0x0090
                                                            identifier:@"net.noumenon-th"];
     
     //以下はデフォルト値で設定されている
@@ -71,16 +81,35 @@
   }
 }
 
+#pragma mark -utility
+- (void)setEnterMessage:(NSString*)message
+{
+  self.baseMessage.hidden = NO;
+  self.enterMessageLabel.hidden = NO;
+  self.enterMessageLabel.text = message;
+  [self.enterMessageLabel sizeToFit];
+}
+
+- (void)hideEnterMessage
+{
+  self.enterMessageLabel.hidden = YES;
+  self.baseMessage.hidden = YES;
+}
+
 #pragma mark - delegate
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
   NSLog(@"ビーコン領域に入りました");
+  //self.enterMessageLabel.text = @"部屋に入りました";//仮
+  [self setEnterMessage:@"部屋に入りました"];
+  //(8F6633)背景カラー
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
   NSLog(@"ビーコン領域を出ました");
+  [self hideEnterMessage];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
@@ -129,9 +158,11 @@
   switch (state) {
     case CLRegionStateInside:
       NSLog(@"ビーコン領域にいます");
+      [self setEnterMessage:@"部屋に入りました"];
       break;
     case CLRegionStateOutside:
       NSLog(@"ビーコン領域外です");
+      [self hideEnterMessage];
       break;
     case CLRegionStateUnknown:
       NSLog(@"どちらにいるのか良く分かりません");
