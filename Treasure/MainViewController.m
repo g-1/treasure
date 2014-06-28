@@ -9,6 +9,8 @@
 #import "MainViewController.h"
 #import "RiddleViewController.h"
 
+#import "RoomType.h"
+
 @interface MainViewController ()
 
 @property(nonatomic) CLLocationManager* locationManager;
@@ -23,6 +25,7 @@
 //utility
 - (void)setEnterMessage:(NSString*)message;
 - (void)hideEnterMessage;
+- (int)getRoomType:(CLBeacon*)beacon;
 
 @end
 
@@ -33,7 +36,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    _roomType = 0;
+    _roomType = RoomType_END;
   }
   return self;
 }
@@ -76,7 +79,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   RiddleViewController* nextViewController = (RiddleViewController*)segue.destinationViewController;
-  nextViewController.roomType = 0;//仮
+  nextViewController.roomType = self.roomType;//仮
 }
 
 #pragma mark -utility
@@ -92,6 +95,36 @@
 {
   self.enterMessageLabel.hidden = YES;
   self.baseMessage.hidden = YES;
+}
+
+- (int)getRoomType:(CLBeacon*)beacon
+{
+  unsigned int const major = [beacon.major unsignedIntValue];
+  unsigned int const minor = [beacon.minor unsignedIntValue];
+  
+  if(major == 0x0001 && minor == 0x0006){
+    return RoomType_01;
+  }else if(major == 0x0002 && minor == 0x0008){
+    return RoomType_02;
+  }else if(major == 0x0003 && minor == 0x0003){
+    return RoomType_03;
+  }else if(major == 0x0001 && minor == 0x0090){
+    return RoomType_04;
+  }else if(major == 0x0001 && minor == 0x0005){
+    return RoomType_05;
+  }else if(major == 0x0003 && minor == 0x0c30){
+    return RoomType_ENTRANCE;
+  }else if(major == 0x0002 && minor == 0x0510){
+    return RoomType_ALASKA;
+  }else if(major == 0x0100 && minor == 0x0036){
+    return RoomType_AMAZON;
+  }else if(major == 0x0002 && minor == 0x01ff){
+    return RoomType_TEXAS;
+  }else if(major == 0x0100 && minor == 0x00c1){
+    return RoomType_SHANGHAI;
+  }
+  
+  return RoomType_END;
 }
 
 #pragma mark - delegate
@@ -114,9 +147,9 @@
 {
   if (beacons.count > 0) {
     // 最も距離の近いBeaconについて処理する
-    CLBeacon *nearestBeacon = beacons.firstObject;
+    CLBeacon* nearestBeacon = beacons.firstObject;
     
-    NSString *rangeMessage;
+    NSString* rangeMessage;
     
     // Beacon の距離でメッセージを変える
     self.riddleButton.hidden = YES;
@@ -124,10 +157,12 @@
       case CLProximityImmediate:
         rangeMessage = @"ものすごく近い";
         self.riddleButton.hidden = NO;
+        self.roomType = [self getRoomType:nearestBeacon];
         break;
       case CLProximityNear:
         rangeMessage = @"近い";
         self.riddleButton.hidden = NO;
+        self.roomType = [self getRoomType:nearestBeacon];
         break;
       case CLProximityFar:
         rangeMessage = @"遠い";

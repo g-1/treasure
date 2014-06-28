@@ -8,6 +8,8 @@
 
 #import "RiddleViewController.h"
 
+#import "RoomType.h"
+
 @interface RiddleViewController ()
 
 @property(nonatomic, weak) IBOutlet UILabel* riddleTitle;
@@ -21,7 +23,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    _roomType = 0;
+    _roomType = RoomType_END;
   }
   return self;
 }
@@ -31,11 +33,12 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   switch (self.roomType) {
-    case 0:
+    case RoomType_01:
       self.riddleTitle.text = @"ナゾ001";
       break;
       
     default:
+      self.riddleTitle.text = @"エラー";
       break;
   }
 }
