@@ -23,6 +23,7 @@
 		3B3A7083195E8174002C59FF /* TreasureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7082195E8174002C59FF /* TreasureTests.m */; };
 		3B754C6D195E893600FF7287 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C6C195E893600FF7287 /* MainViewController.m */; };
 		3B754C71195E8A3400FF7287 /* RiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C70195E8A3400FF7287 /* RiddleViewController.m */; };
+		3B93E868195E9727002F94D5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B93E867195E9727002F94D5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3B754C6C195E893600FF7287 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3B754C6F195E8A3400FF7287 /* RiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiddleViewController.h; sourceTree = "<group>"; };
 		3B754C70195E8A3400FF7287 /* RiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiddleViewController.m; sourceTree = "<group>"; };
+		3B93E867195E9727002F94D5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B93E868195E9727002F94D5 /* CoreLocation.framework in Frameworks */,
 				3B3A705A195E8174002C59FF /* CoreGraphics.framework in Frameworks */,
 				3B3A705C195E8174002C59FF /* UIKit.framework in Frameworks */,
 				3B3A7058195E8174002C59FF /* Foundation.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		3B3A7056195E8174002C59FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B93E867195E9727002F94D5 /* CoreLocation.framework */,
 				3B3A7057195E8174002C59FF /* Foundation.framework */,
 				3B3A7059195E8174002C59FF /* CoreGraphics.framework */,
 				3B3A705B195E8174002C59FF /* UIKit.framework */,
@@ -396,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: TAKAHIRO NAKA (6Y4JHHRM3L)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Treasure/Treasure-Prefix.pch";
 				INFOPLIST_FILE = "Treasure/Treasure-Info.plist";
