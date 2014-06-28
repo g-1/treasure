@@ -14,12 +14,11 @@
 @property(nonatomic) CLLocationManager* locationManager;
 @property(nonatomic) NSUUID* proximityUUID;
 @property(nonatomic) CLBeaconRegion* beaconRegion;
+@property(nonatomic) int roomType;
 
 @property(nonatomic, weak) IBOutlet UIView* baseMessage;
 @property(nonatomic, weak) IBOutlet UILabel* enterMessageLabel;
-
-//action
-- (IBAction)tap:(id)sender;
+@property(nonatomic, weak) IBOutlet UIButton* riddleButton;
 
 //utility
 - (void)setEnterMessage:(NSString*)message;
@@ -34,6 +33,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
+    _roomType = 0;
   }
   return self;
 }
@@ -75,10 +75,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  if( [segue.identifier isEqualToString:@"riddle"] ){
-    RiddleViewController* nextViewController = (RiddleViewController*)segue.destinationViewController;
-    nextViewController.roomType = 0;//仮
-  }
+  RiddleViewController* nextViewController = (RiddleViewController*)segue.destinationViewController;
+  nextViewController.roomType = 0;//仮
 }
 
 #pragma mark -utility
@@ -121,12 +119,15 @@
     NSString *rangeMessage;
     
     // Beacon の距離でメッセージを変える
+    self.riddleButton.hidden = YES;
     switch (nearestBeacon.proximity) {
       case CLProximityImmediate:
         rangeMessage = @"ものすごく近い";
+        self.riddleButton.hidden = NO;
         break;
       case CLProximityNear:
         rangeMessage = @"近い";
+        self.riddleButton.hidden = NO;
         break;
       case CLProximityFar:
         rangeMessage = @"遠い";
@@ -184,11 +185,6 @@
 
 
 #pragma mark - action
-- (IBAction)tap:(id)sender
-{
-  [self performSegueWithIdentifier:@"riddle" sender:sender];
-}
-
 /*
  #pragma mark - Navigation
  
