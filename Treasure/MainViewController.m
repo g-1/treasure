@@ -177,10 +177,10 @@
     }
     
     // ローカル通知
-    NSString *message = [NSString stringWithFormat:@"major:%@, minor:%@, accuracy:%f, rssi:%ld",
+    NSString* message = [NSString stringWithFormat:@"major:%@, minor:%@, accuracy:%f, rssi:%ld",
                          nearestBeacon.major, nearestBeacon.minor, nearestBeacon.accuracy, (long)nearestBeacon.rssi];
     //[destLabel setText:rangeMessage];
-    //[self sendLocalNotificationForMessage:[rangeMessage stringByAppendingString:message]];
+    [self sendLocalNotificationForMessage:[rangeMessage stringByAppendingString:message]];
   }
 }
 
@@ -202,7 +202,8 @@
       break;
     case CLRegionStateOutside:
       NSLog(@"ビーコン領域外です");
-      [self hideEnterMessage];
+      //[self hideEnterMessage];
+      [self setEnterMessage:@"ビーコン領域外です"];
       break;
     case CLRegionStateUnknown:
       NSLog(@"どちらにいるのか良く分かりません");
