@@ -43,6 +43,7 @@
 
 - (void)viewDidLoad
 {
+  NSLog(@"viewDidLoad");
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
@@ -63,6 +64,9 @@
     self.beaconRegion.notifyOnEntry = YES;
     self.beaconRegion.notifyOnExit = YES;
     self.beaconRegion.notifyEntryStateOnDisplay = NO;
+    
+    //動作権限
+    [self.locationManager requestAlwaysAuthorization];
     
     // Beaconによる領域観測を開始
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
