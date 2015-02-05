@@ -20,7 +20,6 @@
 
 @property(nonatomic, weak) IBOutlet UIView* baseMessage;
 @property(nonatomic, weak) IBOutlet UILabel* enterMessageLabel;
-@property(nonatomic, weak) IBOutlet UIButton* riddleButton;
 
 @end
 
@@ -153,16 +152,13 @@
     NSString* rangeMessage;
     
     // Beacon の距離でメッセージを変える
-    self.riddleButton.hidden = YES;
     switch (nearestBeacon.proximity) {
       case CLProximityImmediate:
         rangeMessage = @"ものすごく近い";
-        self.riddleButton.hidden = NO;
         self.roomType = [self getRoomType:nearestBeacon];
         break;
       case CLProximityNear:
         rangeMessage = @"近い";
-        self.riddleButton.hidden = NO;
         self.roomType = [self getRoomType:nearestBeacon];
         break;
       case CLProximityFar:

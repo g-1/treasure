@@ -25,6 +25,14 @@
     // 通知を登録する
     [application scheduleLocalNotification:notification];
   }
+  
+  //ローカル通知の許可
+  if ([application respondsToSelector:@selector(registerUserNotificationSettings:)])
+  {
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil];
+    
+    [application registerUserNotificationSettings:settings];
+  }
 
   
   [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
