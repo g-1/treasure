@@ -7,9 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import "RiddleViewController.h"
-
 #import "RoomType.h"
+
+#define kUUID @"9D46B74B-AE5B-4CEA-965D-D3C4EEC89D3C"
 
 @interface MainViewController ()
 
@@ -21,11 +21,6 @@
 @property(nonatomic, weak) IBOutlet UIView* baseMessage;
 @property(nonatomic, weak) IBOutlet UILabel* enterMessageLabel;
 @property(nonatomic, weak) IBOutlet UIButton* riddleButton;
-
-//utility
-- (void)setEnterMessage:(NSString*)message;
-- (void)hideEnterMessage;
-- (int)getRoomType:(CLBeacon*)beacon;
 
 @end
 
@@ -52,12 +47,12 @@
     self.locationManager.delegate = self;
     
     // 生成したUUIDからNSUUIDを作成
-    self.proximityUUID = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
+    self.proximityUUID = [[NSUUID alloc] initWithUUIDString:kUUID];
     
     // 観測するビーコン領域の作成
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.proximityUUID
                                                                 major:0x0001
-                                                                minor:0x0090
+                                                                minor:0x0001
                                                            identifier:@"net.noumenon-th"];
     
     //以下はデフォルト値で設定されている
@@ -82,8 +77,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+  /*
   RiddleViewController* nextViewController = (RiddleViewController*)segue.destinationViewController;
   nextViewController.roomType = self.roomType;//仮
+   */
 }
 
 #pragma mark -utility

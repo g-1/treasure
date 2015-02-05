@@ -14,7 +14,6 @@
 		3B3A7064195E8174002C59FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7063195E8174002C59FF /* main.m */; };
 		3B3A7068195E8174002C59FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7067195E8174002C59FF /* AppDelegate.m */; };
 		3B3A706B195E8174002C59FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A7069195E8174002C59FF /* Main.storyboard */; };
-		3B3A706E195E8174002C59FF /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A706D195E8174002C59FF /* TitleViewController.m */; };
 		3B3A7070195E8174002C59FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A706F195E8174002C59FF /* Images.xcassets */; };
 		3B3A7077195E8174002C59FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A7076195E8174002C59FF /* XCTest.framework */; };
 		3B3A7078195E8174002C59FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3A7057195E8174002C59FF /* Foundation.framework */; };
@@ -22,7 +21,6 @@
 		3B3A7081195E8174002C59FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B3A707F195E8174002C59FF /* InfoPlist.strings */; };
 		3B3A7083195E8174002C59FF /* TreasureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A7082195E8174002C59FF /* TreasureTests.m */; };
 		3B754C6D195E893600FF7287 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C6C195E893600FF7287 /* MainViewController.m */; };
-		3B754C71195E8A3400FF7287 /* RiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B754C70195E8A3400FF7287 /* RiddleViewController.m */; };
 		3B93E868195E9727002F94D5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B93E867195E9727002F94D5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +46,6 @@
 		3B3A7066195E8174002C59FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B3A7067195E8174002C59FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3B3A706A195E8174002C59FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B3A706C195E8174002C59FF /* TitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
-		3B3A706D195E8174002C59FF /* TitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		3B3A706F195E8174002C59FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B3A7075195E8174002C59FF /* TreasureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3A7076195E8174002C59FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,8 +54,6 @@
 		3B3A7082195E8174002C59FF /* TreasureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreasureTests.m; sourceTree = "<group>"; };
 		3B754C6B195E893600FF7287 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3B754C6C195E893600FF7287 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		3B754C6F195E8A3400FF7287 /* RiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiddleViewController.h; sourceTree = "<group>"; };
-		3B754C70195E8A3400FF7287 /* RiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiddleViewController.m; sourceTree = "<group>"; };
 		3B93E867195E9727002F94D5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3B93E86A195EB39D002F94D5 /* RoomType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,12 +160,8 @@
 		3B754C6E195E894900FF7287 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3B3A706C195E8174002C59FF /* TitleViewController.h */,
-				3B3A706D195E8174002C59FF /* TitleViewController.m */,
 				3B754C6B195E893600FF7287 /* MainViewController.h */,
 				3B754C6C195E893600FF7287 /* MainViewController.m */,
-				3B754C6F195E8A3400FF7287 /* RiddleViewController.h */,
-				3B754C70195E8A3400FF7287 /* RiddleViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -289,9 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B3A706E195E8174002C59FF /* TitleViewController.m in Sources */,
 				3B3A7068195E8174002C59FF /* AppDelegate.m in Sources */,
-				3B754C71195E8A3400FF7287 /* RiddleViewController.m in Sources */,
 				3B3A7064195E8174002C59FF /* main.m in Sources */,
 				3B754C6D195E893600FF7287 /* MainViewController.m in Sources */,
 			);
